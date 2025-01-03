@@ -6,7 +6,7 @@ function update_version(){
   IFS='.' read -r -a version_parts <<< "$version_number"
   new_patch_version=$((${version_parts[2]}+1))
   new_version="${version_parts[0]}.${version_parts[1]}.$new_patch_version"
-  sed -i "s@version=\"$version_number\"@version=\"$new_version\"@g" $FILE
+  #sed -i "s@version=\"$version_number\"@version=\"$new_version\"@g" $FILE
   sed -i.bak "s@version=\"$version_number\"@version=\"$new_version\"@g" $FILE
 }
 update_version setup.py
