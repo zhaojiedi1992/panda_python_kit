@@ -7,6 +7,7 @@ function update_version(){
   new_patch_version=$((${version_parts[2]}+1))
   new_version="${version_parts[0]}.${version_parts[1]}.$new_patch_version"
   sed -i "s@version=\"$version_number\"@version=\"$new_version\"@g" $FILE
+  sed -i.bak "s@version=\"$version_number\"@version=\"$new_version\"@g" $FILE
 }
 update_version setup.py
 source .venv/bin/activate 2>/dev/null 
