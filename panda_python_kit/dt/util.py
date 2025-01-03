@@ -35,7 +35,7 @@ def ts2dt(ts):
     return datetime.fromtimestamp(ts/1000)
 
 
-def dt2str(dt, date_format):
+def dt2str(dt, date_format="%Y%m%d%H%M%S"):
     """  
     将日期时间对象转换为格式化的字符串。  
     """
