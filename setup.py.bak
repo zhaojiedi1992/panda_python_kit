@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="panda-python-kit",
-    version="0.0.13",
+    version="0.0.14",
     author="zhaojiedi",
     author_email="1072892917@qq.com",
 
@@ -28,5 +28,5 @@ setup(
         'Programming Language :: Python :: 3.10',
     ],
     license="MIT",
-    url="",
+    url="https://github.com/zhaojiedi1992/panda_python_kit",
 )
