@@ -16,3 +16,7 @@ conda activate panda_python_kit 2>/dev/null
 rm -rf dist
 python3 -m build
 twine upload  dist/*
+
+git add . 
+git commit -m "add"
+git push
