@@ -3,11 +3,11 @@ from setuptools import setup, find_packages
 setup(
     name="panda-python-kit",
     version="0.0.11",
-    author="zhaojiedi.zjd",
+    author="zhaojiedi",
     author_email="1072892917@qq.com",
 
     packages=find_packages(),
-    install_requires=["requests","python-dateutil","pandas"],
+    install_requires=["requests","python-dateutil","pandas","build"],
     include_package_data=True,
     platforms='any',
     python_requires='>=3.6',
