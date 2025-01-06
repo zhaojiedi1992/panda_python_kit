@@ -14,8 +14,4 @@ class ResultModel:
         return json.dumps(self.__dict__())
 
     def __dict__(self):
-        return  {
-            "success":self.success,
-            "data": self.data,
-            "message":self.message
-        }
+        return self.__dict__
