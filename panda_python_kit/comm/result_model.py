@@ -14,4 +14,15 @@ class ResultModel:
         return json.dumps(self.__dict__())
 
     def __dict__(self):
-        return self.__dict__
+        data_dict = None
+        if self.data:
+            if hasattr(self.data, "__dict__"):
+                data_dict = self.data.__dict__()
+            else:
+                data_dict = self.data
+        return {
+            "success":self.success,
+            "data":self.data_dict,
+            "message":self.message
+        }
+
