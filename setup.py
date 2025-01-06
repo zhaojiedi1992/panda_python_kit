@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="panda-python-kit",
-    version="0.0.24",
+    version="0.0.25",
     author="zhaojiedi",
     author_email="1072892917@qq.com",
 

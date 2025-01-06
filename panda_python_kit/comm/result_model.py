@@ -22,7 +22,7 @@ class ResultModel:
                 data_dict = self.data
         return {
             "success":self.success,
-            "data":self.data_dict,
+            "data": data_dict,
             "message":self.message
         }
 
