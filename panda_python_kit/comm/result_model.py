@@ -1,3 +1,5 @@
+import json
+
 
 class ResultModel:
     def __init__(self,success=True,data=None,message=""):
@@ -9,8 +11,11 @@ class ResultModel:
         return "success:%s,data:%s,message:%s" % (self.success,self.data,self.message)
 
     def to_json(self):
-        return {
+        return json.dumps(self.__dict__())
+
+    def __dict__(self):
+        return  {
             "success":self.success,
-            "data":self.data,
+            "data": self.data,
             "message":self.message
         }
