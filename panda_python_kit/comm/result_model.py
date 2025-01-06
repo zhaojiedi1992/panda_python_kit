@@ -7,3 +7,10 @@ class ResultModel:
 
     def __str__(self):
         return "success:%s,data:%s,message:%s" % (self.success,self.data,self.message)
+
+    def to_json(self):
+        return {
+            "success":self.success,
+            "data":self.data,
+            "message":self.message
+        }
