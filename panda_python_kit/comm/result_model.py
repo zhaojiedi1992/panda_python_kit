@@ -14,12 +14,10 @@ class ResultModel:
         return json.dumps(self.to_dict())
 
     def to_dict(self):
-        data_dict = None
+        data_dict = self.data
         if self.data:
             if hasattr(self.data, "to_dict"):
                 data_dict = self.data.to_dict()
-            else:
-                data_dict = self.data
         return {
             "success": self.success,
             "data": data_dict,
