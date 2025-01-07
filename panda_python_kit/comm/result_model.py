@@ -11,18 +11,19 @@ class ResultModel:
         return "success:%s,data:%s,message:%s" % (self.success,self.data,self.message)
 
     def to_json(self):
-        return json.dumps(self.__dict__())
+        return json.dumps(self.to_dict())
 
-    def __dict__(self):
+    def to_dict(self):
         data_dict = None
         if self.data:
-            if hasattr(self.data, "__dict__"):
-                data_dict = self.data.__dict__()
+            if hasattr(self.data, "to_dict"):
+                data_dict = self.data.to_dict()
             else:
                 data_dict = self.data
         return {
-            "success":self.success,
+            "success": self.success,
             "data": data_dict,
-            "message":self.message
+            "message": self.message
         }
+
 
